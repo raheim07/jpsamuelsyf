@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { User, Mail, Phone, HeartHandshake, CheckCircle2 } from "lucide-react"
+import { createVolunteer } from "@/services/volunteer.service"
 
 interface VolunteerData {
   firstName: string
@@ -51,9 +52,31 @@ export function VolunteerForm() {
     // TODO: connect volunteer submission to Supabase volunteers table
     // TODO: send notification email to foundation admin when a volunteer signs up
 
-    await new Promise((resolve) => setTimeout(resolve, 800))
-    setIsSubmitting(false)
-    setSubmitted(true)
+    try {
+        await createVolunteer({
+          first_name: form.firstName,
+          last_name: form.lastName,
+          age: Number(form.age),
+          sex: form.sex,
+          email: form.email,
+          phone_number: form.phone,
+          consent: form.permissionToContact,
+        })
+
+        setSubmitted(true)
+      }
+      catch (error: any) {
+        console.log("Full error:", error)
+        console.log("Message:", error?.message)
+        console.log("Code:", error?.code)
+        console.log("Details:", error?.details)
+        console.log("Hint:", error?.hint)
+
+        alert(error?.message ?? "Failed")
+      }
+      finally {
+        setIsSubmitting(false)
+      }
   }
 
   if (submitted) {
