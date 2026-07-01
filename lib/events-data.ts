@@ -20,29 +20,29 @@ export const eventsSectionEnabled = true
 export const upcomingEvents: UpcomingEvent[] = [
   {
     id: "1",
-    title: "Annual Scholarship Gala",
-    date: "Coming Soon",
-    location: "To Be Announced",
+    title: "Back To School Fundraiser",
+    date: "Saturday, July 25, 2026",
+    location: "Pentecostal Gospel Temple, 5 Homestead Road, Kingston 2",
     description:
-      "An evening celebrating our scholarship recipients and the legacy of Jean Pierre Samuels.",
-    flyer: "",
+      "An evening of fun, food, and fellowship to raise funds for the foundation's back-to-school initiatives.",
+    flyer: "/events/back-to-school-flyer.jpeg",
   },
-  {
-    id: "2",
-    title: "Youth Empowerment Workshop",
-    date: "Coming Soon",
-    location: "To Be Announced",
-    description:
-      "A hands-on workshop helping young people build skills, confidence, and community.",
-    flyer: "",
-  },
-  {
-    id: "3",
-    title: "Community Fundraiser",
-    date: "Coming Soon",
-    location: "To Be Announced",
-    description:
-      "Join us as we come together to raise support for the next generation of leaders.",
-    flyer: "",
-  },
+  // {
+  //   id: "2",
+  //   title: "Youth Empowerment Workshop",
+  //   date: "Coming Soon",
+  //   location: "To Be Announced",
+  //   description:
+  //     "A hands-on workshop helping young people build skills, confidence, and community.",
+  //   flyer: "",
+  // },
+  // {
+  //   id: "3",
+  //   title: "Community Fundraiser",
+  //   date: "Coming Soon",
+  //   location: "To Be Announced",
+  //   description:
+  //     "Join us as we come together to raise support for the next generation of leaders.",
+  //   flyer: "",
+  // },
 ]
