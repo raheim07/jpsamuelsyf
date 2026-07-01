@@ -45,7 +45,7 @@ export function EventsSection() {
             What&apos;s Happening
           </span>
           <h2 className="font-serif text-3xl lg:text-4xl font-bold mt-3 text-balance">
-            Upcoming Eventssss
+            Upcoming EventRaheim
           </h2>
           <p className="text-white/70 mt-4">
             Stay connected with the foundation. Browse our upcoming events and flyers below.
